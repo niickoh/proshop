@@ -1,4 +1,5 @@
 import { useParams } from 'react-router'
+import Button from '../../shared/ui/Button'
 import BackToCatalog from './components/BackToCatalog'
 import ProductDetailSkeleton from './components/ProductDetailSkeleton'
 import ProductGallery from './components/ProductGallery'
@@ -20,8 +21,10 @@ export default function ProductoDetallePage() {
 
   if (isNotFound) {
     return (
-      <div className="mx-auto flex max-w-3xl flex-col items-start gap-4 py-8">
-        <p className="text-gray-700">Este producto no existe o ya no está disponible</p>
+      <div className="mx-auto flex max-w-3xl flex-col items-start gap-4 py-8 md:py-12">
+        <p className="text-sm text-slate-600 md:text-base">
+          Este producto no existe o ya no está disponible
+        </p>
         <BackToCatalog />
       </div>
     )
@@ -29,26 +32,20 @@ export default function ProductoDetallePage() {
 
   if (isError || !product) {
     return (
-      <div className="mx-auto flex max-w-3xl flex-col items-start gap-4 py-8">
+      <div className="mx-auto flex max-w-3xl flex-col items-start gap-4 py-8 md:py-12">
         <BackToCatalog />
         <div role="alert" className="space-y-4">
-          <p className="text-gray-700">
+          <p className="text-sm text-slate-600 md:text-base">
             No pudimos cargar el producto. Revisa tu conexión e inténtalo de nuevo.
           </p>
-          <button
-            type="button"
-            onClick={() => refetch()}
-            className="min-h-11 rounded-md bg-gray-900 px-6 text-sm font-medium text-white hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            Reintentar
-          </button>
+          <Button onClick={() => refetch()}>Reintentar</Button>
         </div>
       </div>
     )
   }
 
   return (
-    <article key={product.id} className="mx-auto max-w-3xl space-y-6 pt-4 pb-28 md:pb-8">
+    <article key={product.id} className="mx-auto max-w-3xl space-y-8 pt-6 pb-28 md:pb-8">
       <BackToCatalog />
       <ProductGallery name={product.name} images={product.images} dimmed={!product.inStock} />
       <ProductInfo product={product}>

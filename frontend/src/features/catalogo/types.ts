@@ -59,6 +59,17 @@ export type ProductsPage = {
   hasMore: boolean
 }
 
+/** Respuesta de `GET /api/products/filters`: valores distintos y ordenados. */
+export type ProductFilterOptions = {
+  categories: string[]
+  genders: string[]
+  /** Orden lógico: XS…XXL, luego tallas de calzado. */
+  sizes: string[]
+  colors: string[]
+  brands: string[]
+  priceRange: { min: number; max: number }
+}
+
 export type ListFilterKey = 'category' | 'gender' | 'size' | 'color' | 'brand'
 
 /** Cambio parcial que emite cada componente de filtro. */

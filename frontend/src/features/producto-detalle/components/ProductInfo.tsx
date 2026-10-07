@@ -1,7 +1,7 @@
 import { useId, type ReactNode } from 'react'
-import { clsx } from 'clsx'
 import SaleBadge from '../../../shared/components/Badge/SaleBadge'
 import SoldOutBadge from '../../../shared/components/Badge/SoldOutBadge'
+import { cn } from '../../../shared/ui/cn'
 import { formatPrice, getDiscountPercent } from '../../../shared/utils/formatPrice'
 import type { Product } from '../../catalogo/types'
 
@@ -17,22 +17,24 @@ export default function ProductInfo({ product, children }: Props) {
   const descriptionId = useId()
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-2">
-        <p className="text-sm tracking-wide text-gray-500 uppercase">{brand}</p>
-        <h1 className="text-2xl font-bold break-words text-gray-900 md:text-3xl">{name}</h1>
-        <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+    <div className="space-y-8">
+      <div className="space-y-3">
+        <p className="text-xs font-medium tracking-wide text-slate-500 uppercase">{brand}</p>
+        <h1 className="text-2xl font-bold tracking-tight break-words text-slate-900 md:text-3xl">
+          {name}
+        </h1>
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 tabular-nums">
           <span
-            className={clsx(
-              'text-xl font-semibold',
-              discount > 0 ? 'text-red-700' : 'text-gray-900',
+            className={cn(
+              'text-2xl font-semibold',
+              discount > 0 ? 'text-red-600' : 'text-slate-900',
             )}
           >
             {formatPrice(price)}
           </span>
           {discount > 0 && compareAtPrice !== undefined && (
             <>
-              <s className="text-base text-gray-500">
+              <s className="text-base text-slate-500">
                 <span className="sr-only">Precio anterior: </span>
                 {formatPrice(compareAtPrice)}
               </s>
@@ -46,10 +48,12 @@ export default function ProductInfo({ product, children }: Props) {
       {children}
 
       <section aria-labelledby={descriptionId} className="space-y-2">
-        <h2 id={descriptionId} className="text-lg font-semibold text-gray-900">
+        <h2 id={descriptionId} className="text-lg font-semibold text-slate-900">
           Descripción
         </h2>
-        <p className="break-words whitespace-pre-line text-gray-700">{description}</p>
+        <p className="text-sm break-words whitespace-pre-line text-slate-600 md:text-base">
+          {description}
+        </p>
       </section>
     </div>
   )

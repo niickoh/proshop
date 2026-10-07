@@ -1,5 +1,7 @@
-import { clsx } from 'clsx'
 import { useCallback } from 'react'
+import Button from '../../../shared/ui/Button'
+import { cn } from '../../../shared/ui/cn'
+import { transition } from '../../../shared/ui/styles'
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll'
 import type { Product } from '../types'
 import { gridClass } from './gridClass'
@@ -35,7 +37,7 @@ export default function ProductGrid({
       <ul
         aria-label="Productos"
         aria-busy={isStale}
-        className={clsx(gridClass, 'transition-opacity', isStale && 'opacity-50')}
+        className={cn(gridClass, transition, isStale && 'opacity-50')}
       >
         {products.map((product) => (
           <li key={product.id} className="min-w-0">
@@ -50,16 +52,11 @@ export default function ProductGrid({
 
       <div className="flex justify-center py-8">
         {hasNextPage ? (
-          <button
-            type="button"
-            onClick={loadMore}
-            disabled={isFetchingNextPage}
-            className="min-h-11 rounded-md border border-gray-300 px-6 text-sm font-medium text-gray-700 hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none disabled:opacity-50"
-          >
+          <Button variant="secondary" onClick={loadMore} disabled={isFetchingNextPage}>
             Cargar más
-          </button>
+          </Button>
         ) : (
-          <p className="text-sm text-gray-500">Viste los {total} productos</p>
+          <p className="text-sm text-slate-500">Viste los {total} productos</p>
         )}
       </div>
     </>

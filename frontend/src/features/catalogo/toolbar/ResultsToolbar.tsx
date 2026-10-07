@@ -1,4 +1,7 @@
-import { clsx } from 'clsx'
+import { SlidersHorizontal } from 'lucide-react'
+import Badge from '../../../shared/ui/Badge'
+import Button from '../../../shared/ui/Button'
+import Select from '../../../shared/ui/Select'
 import { SORT_LABELS } from '../data/filterOptions'
 import { SORT_OPTIONS, type SortOption } from '../types'
 
@@ -11,9 +14,6 @@ type Props = {
   activeCount: number
 }
 
-const focusRing =
-  'focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none'
-
 export default function ResultsToolbar({
   total,
   sort,
@@ -22,46 +22,34 @@ export default function ResultsToolbar({
   activeCount,
 }: Props) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-2">
-      <p aria-live="polite" className="text-sm text-gray-600">
-        {total === undefined ? ' ' : `${total} ${total === 1 ? 'resultado' : 'resultados'}`}
+    <div className="flex flex-wrap items-center justify-between gap-3">
+      <p aria-live="polite" className="text-sm font-medium text-slate-500 tabular-nums">
+        {total === undefined ? ' ' : `${total} ${total === 1 ? 'resultado' : 'resultados'}`}
       </p>
 
-      <div className="flex items-center gap-2">
+      <div className="flex min-w-0 items-center gap-2">
         {onOpenFilters && (
-          <button
-            type="button"
-            onClick={onOpenFilters}
-            className={clsx(
-              'flex min-h-11 min-w-11 items-center gap-2 rounded-md border border-gray-300 px-3 text-sm font-medium text-gray-700 hover:bg-gray-50 lg:hidden',
-              focusRing,
-            )}
-          >
+          <Button variant="secondary" size="sm" onClick={onOpenFilters} className="lg:hidden">
+            <SlidersHorizontal aria-hidden="true" size={20} strokeWidth={1.75} />
             Filtros
-            {activeCount > 0 && (
-              <span className="rounded-full bg-blue-600 px-2 py-0.5 text-xs text-white">
-                ({activeCount})
-              </span>
-            )}
-          </button>
+            {activeCount > 0 && <Badge tone="brand">({activeCount})</Badge>}
+          </Button>
         )}
-        <label className="flex items-center gap-2 text-sm text-gray-600">
-          <span className="sr-only sm:not-sr-only">Ordenar por</span>
-          <select
+        <label className="flex min-w-0 items-center gap-2 text-sm text-slate-500">
+          <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">Ordenar por</span>
+          <Select
             aria-label="Ordenar por"
             value={sort ?? 'relevancia'}
             onChange={(event) => onSortChange(event.target.value as SortOption)}
-            className={clsx(
-              'min-h-11 max-w-44 rounded-md border border-gray-300 bg-white px-2 text-sm text-gray-900 sm:max-w-none',
-              focusRing,
-            )}
+            wrapperClassName="w-auto min-w-0"
+            className="pr-9 pl-3"
           >
             {SORT_OPTIONS.map((option) => (
               <option key={option} value={option}>
                 {SORT_LABELS[option]}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
       </div>
     </div>

@@ -1,32 +1,18 @@
 import { NotFoundError } from '../../../lib/errors'
+import { apiGet, isMockMode, simulateLatency } from '../../../lib/http'
 import { PRODUCTS } from '../../catalogo/data/products'
 import type { Product } from '../../catalogo/types'
 
 export const SIMULATED_LATENCY_MS = 300
 
-const wait = (ms: number, signal?: AbortSignal) =>
-  new Promise<void>((resolve, reject) => {
-    const abort = () => reject(new DOMException('La petición fue cancelada', 'AbortError'))
-    if (signal?.aborted) return abort()
-    const timer = setTimeout(resolve, ms)
-    signal?.addEventListener(
-      'abort',
-      () => {
-        clearTimeout(timer)
-        abort()
-      },
-      { once: true },
-    )
-  })
-
 /**
- * Simula `GET /api/products/:id` sobre el array local; lanza `NotFoundError` (404) si no existe.
- * Para conectar el backend, reemplazar el cuerpo por un `fetch` que lance `NotFoundError`
- * cuando `response.status === 404`.
+ * `GET /api/products/:id`; lanza `NotFoundError` (404) si no existe.
+ * Con `VITE_USE_MOCKS=false` llama al backend; si no, busca en el array local.
  */
 export async function getProduct(id: string, signal?: AbortSignal): Promise<Product> {
-  await wait(SIMULATED_LATENCY_MS, signal)
+  if (!isMockMode()) return apiGet<Product>(`/products/${encodeURIComponent(id)}`, { signal })
+  await simulateLatency(SIMULATED_LATENCY_MS, signal)
   const product = PRODUCTS.find((p) => p.id === id)
-  if (!product) throw new NotFoundError(`Producto ${id} no encontrado`)
+  if (!product) throw new NotFoundError(`Producto ${id} no encontrado`, 'PRODUCT_NOT_FOUND')
   return product
 }

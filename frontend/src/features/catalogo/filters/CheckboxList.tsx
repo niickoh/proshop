@@ -1,3 +1,6 @@
+import { cn } from '../../../shared/ui/cn'
+import { focusRing, transition } from '../../../shared/ui/styles'
+
 type Option = { value: string; label: string }
 
 type Props = {
@@ -12,15 +15,20 @@ export default function CheckboxList({ options, selected = [], onChange }: Props
     onChange(selected.includes(value) ? selected.filter((v) => v !== value) : [...selected, value])
 
   return (
-    <ul className="space-y-0.5">
+    <ul className="-mx-2 space-y-0.5">
       {options.map((option) => (
         <li key={option.value}>
-          <label className="flex min-h-11 cursor-pointer items-center gap-3 rounded-md px-1 text-sm text-gray-700 hover:bg-gray-50">
+          <label
+            className={cn(
+              'flex min-h-11 cursor-pointer items-center gap-3 rounded-xl px-2 text-sm text-slate-700 hover:bg-slate-50',
+              transition,
+            )}
+          >
             <input
               type="checkbox"
               checked={selected.includes(option.value)}
               onChange={() => toggle(option.value)}
-              className="size-4 rounded border-gray-300 accent-blue-600 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className={cn('size-4 rounded accent-brand-600', focusRing)}
             />
             {option.label}
           </label>

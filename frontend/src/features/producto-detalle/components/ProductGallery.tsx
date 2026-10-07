@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { clsx } from 'clsx'
+import { cn } from '../../../shared/ui/cn'
+import { focusRing, transition } from '../../../shared/ui/styles'
 
 type Props = { name: string; images: string[]; dimmed?: boolean }
 
@@ -9,19 +10,19 @@ export default function ProductGallery({ name, images, dimmed = false }: Props) 
 
   return (
     <div className="space-y-3">
-      <div className="mx-auto w-full max-w-md overflow-hidden rounded-lg bg-gray-100">
+      <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl bg-slate-100">
         <img
           src={active}
           alt={name}
           loading="eager"
-          className={clsx('aspect-[3/4] w-full object-cover', dimmed && 'opacity-60 grayscale')}
+          className={cn('aspect-[3/4] w-full object-cover', dimmed && 'opacity-60 grayscale')}
         />
       </div>
 
       {images.length > 1 && (
         <ul
           aria-label="Fotos del producto"
-          className="mx-auto flex max-w-md snap-x [scrollbar-width:none] gap-2 overflow-x-auto p-1 [&::-webkit-scrollbar]:hidden"
+          className="mx-auto flex max-w-md snap-x [scrollbar-width:none] gap-3 overflow-x-auto p-1 [&::-webkit-scrollbar]:hidden"
         >
           {images.map((src, index) => {
             const isActive = index === activeIndex
@@ -32,11 +33,11 @@ export default function ProductGallery({ name, images, dimmed = false }: Props) 
                   aria-label={`Ver foto ${index + 1} de ${images.length}`}
                   aria-current={isActive ? 'true' : undefined}
                   onClick={() => setActiveIndex(index)}
-                  className={clsx(
-                    'block w-16 overflow-hidden rounded-md border-2 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none',
-                    isActive
-                      ? 'border-gray-900'
-                      : 'border-transparent opacity-70 hover:opacity-100',
+                  className={cn(
+                    'block w-16 overflow-hidden rounded-xl bg-slate-100',
+                    transition,
+                    focusRing,
+                    isActive ? 'ring-2 ring-brand-600' : 'opacity-70 hover:opacity-100',
                   )}
                 >
                   <img

@@ -16,6 +16,9 @@
 
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
+  /* Sombra suave hacia arriba para barras fijas al pie (ej. acciones de compra en móvil). */
+  --shadow-up: 0 -4px 16px -4px rgb(15 23 42 / 0.08);
+
   /* Pulso corto del badge del carrito al cambiar la cantidad. */
   --animate-badge-pop: badge-pop 300ms ease-out;
   @keyframes badge-pop {

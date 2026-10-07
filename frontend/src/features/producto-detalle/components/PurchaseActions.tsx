@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import Button from '../../../shared/ui/Button'
 
 type Props = {
   disabled: boolean
@@ -8,8 +8,8 @@ type Props = {
   describedBy?: string
 }
 
-const buttonBase =
-  'min-h-11 flex-1 rounded-md px-4 py-2 text-sm font-semibold break-words focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:flex-none md:px-6 md:text-base'
+// Alto mínimo en vez de fijo: en 360px el texto puede pasar a dos líneas sin cortarse.
+const buttonClass = 'h-auto min-h-12 flex-1 px-4 py-2 leading-tight md:flex-none md:px-6'
 
 /** Móvil: barra fija abajo. Desde md: en el flujo, bajo el selector de talla. */
 export default function PurchaseActions({ disabled, onAddToCart, onBuyNow, describedBy }: Props) {
@@ -17,35 +17,30 @@ export default function PurchaseActions({ disabled, onAddToCart, onBuyNow, descr
     <div
       role="group"
       aria-label="Acciones de compra"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white pb-[env(safe-area-inset-bottom)] md:static md:z-auto md:border-0 md:bg-transparent"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/90 pb-[env(safe-area-inset-bottom)] shadow-up backdrop-blur md:static md:z-auto md:border-0 md:bg-transparent md:shadow-none md:backdrop-blur-none"
     >
-      <div className="flex gap-2 px-4 py-3 md:px-0 md:py-0">
-        <button
-          type="button"
+      <div className="flex gap-3 px-4 py-3 md:px-0 md:py-0">
+        <Button
+          variant="secondary"
+          size="lg"
           onClick={onAddToCart}
           disabled={disabled}
           aria-disabled={disabled}
           aria-describedby={describedBy}
-          className={clsx(
-            buttonBase,
-            'border border-gray-300 bg-white text-gray-900 hover:bg-gray-50 focus-visible:ring-gray-900',
-          )}
+          className={buttonClass}
         >
           Agregar al carrito
-        </button>
-        <button
-          type="button"
+        </Button>
+        <Button
+          size="lg"
           onClick={onBuyNow}
           disabled={disabled}
           aria-disabled={disabled}
           aria-describedby={describedBy}
-          className={clsx(
-            buttonBase,
-            'bg-brand-600 text-white hover:bg-brand-700 focus-visible:ring-brand-600',
-          )}
+          className={buttonClass}
         >
           Comprar ahora
-        </button>
+        </Button>
       </div>
     </div>
   )

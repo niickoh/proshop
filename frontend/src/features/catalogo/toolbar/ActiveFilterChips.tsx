@@ -1,3 +1,5 @@
+import { X } from 'lucide-react'
+import Button from '../../../shared/ui/Button'
 import { CATEGORY_LABELS, GENDER_LABELS } from '../data/filterOptions'
 import { formatPrice } from '../../../shared/utils/formatPrice'
 import type { Category, Gender, ListFilterKey, ProductFilters } from '../types'
@@ -64,29 +66,31 @@ export default function ActiveFilterChips({ filters, onChange, onClearAll }: Pro
     <div className="flex min-w-0 items-center gap-2">
       <ul
         aria-label="Filtros activos"
-        className="flex min-w-0 snap-x [scrollbar-width:none] gap-2 overflow-x-auto py-1 [&::-webkit-scrollbar]:hidden"
+        className="flex min-w-0 snap-x [scrollbar-width:none] gap-2 overflow-x-auto p-1 [&::-webkit-scrollbar]:hidden"
       >
         {chips.map((chip) => (
           <li key={chip.key} className="shrink-0 snap-start">
-            <button
-              type="button"
+            <Button
+              variant="secondary"
+              size="sm"
               aria-label={`Quitar filtro: ${chip.label}`}
               onClick={() => onChange(chip.remove(filters))}
-              className="flex min-h-11 items-center gap-1 rounded-full border border-gray-300 bg-gray-50 px-3 text-sm whitespace-nowrap text-gray-800 hover:bg-gray-100 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+              className="gap-1.5 rounded-full pr-3 pl-4 font-medium whitespace-nowrap"
             >
               {chip.label}
-              <span aria-hidden="true">×</span>
-            </button>
+              <X aria-hidden="true" size={16} strokeWidth={1.75} className="text-slate-500" />
+            </Button>
           </li>
         ))}
       </ul>
-      <button
-        type="button"
+      <Button
+        variant="ghost"
+        size="sm"
         onClick={onClearAll}
-        className="min-h-11 shrink-0 rounded-md px-2 text-sm font-medium text-blue-700 underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+        className="shrink-0 text-brand-600 hover:text-brand-700"
       >
         Limpiar todo
-      </button>
+      </Button>
     </div>
   )
 }

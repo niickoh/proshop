@@ -1,6 +1,9 @@
+﻿import { CircleAlert } from 'lucide-react'
+import Button from '../../../shared/ui/Button'
+import Input from '../../../shared/ui/Input'
+import Select from '../../../shared/ui/Select'
 import type { EncargoFormState } from '../hooks/useEncargoForm'
 import { TALLAS } from '../schema'
-import { controlClass } from './controlClass'
 import FormField from './FormField'
 import QuantityInput from './QuantityInput'
 
@@ -22,13 +25,14 @@ export default function EncargoForm({
 
   return (
     <form noValidate onSubmit={onSubmit} className="space-y-5">
-      <p className="text-sm text-gray-600">* Campos obligatorios</p>
+      <p className="text-xs font-medium text-slate-500">* Campos obligatorios</p>
 
       {hasSendError && (
         <div
           role="alert"
-          className="rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-800"
+          className="flex items-start gap-2 rounded-xl bg-red-50 p-4 text-sm text-red-700"
         >
+          <CircleAlert aria-hidden="true" size={20} strokeWidth={1.75} className="shrink-0" />
           No pudimos enviar tu encargo. Revisa tu conexión e inténtalo de nuevo
         </div>
       )}
@@ -38,49 +42,53 @@ export default function EncargoForm({
         <div className="grid gap-x-6 gap-y-5 md:grid-cols-2">
           <FormField label="Nombre" required error={errors.nombre?.message}>
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('nombre')}
                 type="text"
                 autoComplete="given-name"
-                className={controlClass(!!errors.nombre)}
+                invalid={!!errors.nombre}
+                className="min-h-11"
               />
             )}
           </FormField>
 
           <FormField label="Apellido" required error={errors.apellido?.message}>
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('apellido')}
                 type="text"
                 autoComplete="family-name"
-                className={controlClass(!!errors.apellido)}
+                invalid={!!errors.apellido}
+                className="min-h-11"
               />
             )}
           </FormField>
 
           <FormField label="Correo" required error={errors.correo?.message}>
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('correo')}
                 type="email"
                 autoComplete="email"
-                className={controlClass(!!errors.correo)}
+                invalid={!!errors.correo}
+                className="min-h-11"
               />
             )}
           </FormField>
 
           <FormField label="Teléfono" required error={errors.telefono?.message}>
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('telefono')}
                 type="tel"
                 autoComplete="tel"
                 placeholder="+56 9 1234 5678"
-                className={controlClass(!!errors.telefono)}
+                invalid={!!errors.telefono}
+                className="min-h-11"
               />
             )}
           </FormField>
@@ -92,12 +100,13 @@ export default function EncargoForm({
             className="md:col-span-2"
           >
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('direccion')}
                 type="text"
                 autoComplete="street-address"
-                className={controlClass(!!errors.direccion)}
+                invalid={!!errors.direccion}
+                className="min-h-11"
               />
             )}
           </FormField>
@@ -110,25 +119,31 @@ export default function EncargoForm({
             className="md:col-span-2"
           >
             {(control) => (
-              <input
+              <Input
                 {...control}
                 {...register('producto')}
                 type="text"
-                className={controlClass(!!errors.producto)}
+                invalid={!!errors.producto}
+                className="min-h-11"
               />
             )}
           </FormField>
 
           <FormField label="Talla" error={errors.talla?.message}>
             {(control) => (
-              <select {...control} {...register('talla')} className={controlClass(!!errors.talla)}>
+              <Select
+                {...control}
+                {...register('talla')}
+                invalid={!!errors.talla}
+                className="min-h-11"
+              >
                 <option value="">No aplica</option>
                 {TALLAS.map((talla) => (
                   <option key={talla} value={talla}>
                     {talla}
                   </option>
                 ))}
-              </select>
+              </Select>
             )}
           </FormField>
 
@@ -157,35 +172,9 @@ export default function EncargoForm({
           </div>
 
           <div className="md:col-span-2">
-            <button
-              type="submit"
-              className="flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-brand-600 px-6 text-base font-semibold text-white hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {isSending && (
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  className="size-5 motion-safe:animate-spin"
-                  fill="none"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="9"
-                    stroke="currentColor"
-                    strokeOpacity={0.3}
-                    strokeWidth={3}
-                  />
-                  <path
-                    d="M21 12a9 9 0 0 0-9-9"
-                    stroke="currentColor"
-                    strokeWidth={3}
-                    strokeLinecap="round"
-                  />
-                </svg>
-              )}
+            <Button type="submit" size="lg" fullWidth loading={isSending}>
               {isSending ? 'Enviando…' : 'Enviar encargo'}
-            </button>
+            </Button>
           </div>
         </div>
       </fieldset>

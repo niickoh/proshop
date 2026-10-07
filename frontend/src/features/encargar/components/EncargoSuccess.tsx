@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { Check } from 'lucide-react'
+import Button from '../../../shared/ui/Button'
 
 type Props = {
   folio: string
@@ -15,30 +17,29 @@ export default function EncargoSuccess({ folio, correo, onStartOver }: Props) {
   }, [])
 
   return (
-    <div className="space-y-4 text-center">
+    <div className="flex flex-col items-center gap-4 text-center">
+      <span className="flex size-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+        <Check aria-hidden="true" size={28} strokeWidth={1.75} />
+      </span>
       <h2
         ref={titleRef}
         tabIndex={-1}
-        className="text-xl font-bold text-gray-900 focus-visible:outline-none"
+        className="text-lg font-semibold text-slate-900 focus-visible:outline-none md:text-xl"
       >
         ¡Recibimos tu encargo!
       </h2>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-slate-500">
         Tu folio es
-        <span className="mt-1 block text-2xl font-bold tracking-wide break-words text-gray-900">
+        <span className="mt-1 block font-mono text-2xl font-semibold tracking-wide break-words text-slate-900">
           {folio}
         </span>
       </p>
-      <p className="break-words text-gray-700">
+      <p className="text-sm break-words text-slate-600 md:text-base">
         Te contactaremos a {correo} en un plazo de 48 horas hábiles
       </p>
-      <button
-        type="button"
-        onClick={onStartOver}
-        className="min-h-11 rounded-md border border-gray-300 bg-white px-6 text-base font-semibold text-gray-900 hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 focus-visible:outline-none"
-      >
+      <Button variant="secondary" onClick={onStartOver} className="mt-2">
         Hacer otro encargo
-      </button>
+      </Button>
     </div>
   )
 }

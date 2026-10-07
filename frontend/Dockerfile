@@ -7,6 +7,8 @@ RUN npm ci
 COPY . .
 ARG VITE_API_URL
 ENV VITE_API_URL=$VITE_API_URL
+ARG VITE_USE_MOCKS=true
+ENV VITE_USE_MOCKS=$VITE_USE_MOCKS
 RUN npm run build
 
 FROM nginxinc/nginx-unprivileged:alpine AS runtime

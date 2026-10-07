@@ -1,4 +1,8 @@
+import { Trash2 } from 'lucide-react'
 import { Link } from 'react-router'
+import { cn } from '../../../shared/ui/cn'
+import IconButton from '../../../shared/ui/IconButton'
+import { focusRing } from '../../../shared/ui/styles'
 import { formatPrice } from '../../../shared/utils/formatPrice'
 import { useCartStore } from '../store/cartStore'
 import type { CartItem } from '../types'
@@ -17,53 +21,44 @@ export default function CartItemRow({ item, onRemove }: Props) {
   const onSale = compareAtPrice !== undefined && compareAtPrice > price
 
   return (
-    <li className="flex gap-3 py-4">
+    <li className="flex gap-4 py-5">
       <Link
         to={`/comprar/${productId}`}
         onClick={closeDrawer}
-        className="shrink-0 self-start rounded-md focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
+        className={cn('shrink-0 self-start rounded-xl', focusRing)}
       >
         <img
           src={image}
           alt={name}
           loading="lazy"
-          className="aspect-[3/4] w-20 max-w-full rounded-md bg-gray-100 object-cover sm:w-24"
+          className="aspect-[3/4] w-20 max-w-full rounded-xl bg-slate-100 object-cover sm:w-24"
         />
       </Link>
 
       <div className="flex min-w-0 flex-1 flex-col gap-2">
         <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0 space-y-0.5">
-            <p className="text-xs tracking-wide break-words text-gray-500 uppercase">{brand}</p>
-            <p className="text-sm font-medium break-words text-gray-900">{name}</p>
-            <p className="text-sm text-gray-600">Talla: {size}</p>
+          <div className="min-w-0 space-y-1">
+            <p className="text-xs font-medium tracking-wide break-words text-slate-500 uppercase">
+              {brand}
+            </p>
+            <p className="text-sm font-medium break-words text-slate-900">{name}</p>
+            <p className="text-xs font-medium text-slate-500">Talla: {size}</p>
           </div>
-          <button
-            type="button"
+          <IconButton
             aria-label={`Eliminar ${lineLabel}`}
             onClick={onRemove}
-            className="-mt-2 -mr-2 flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+            className="-mt-2 -mr-2 shrink-0 text-slate-500"
           >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              className="size-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-            >
-              <path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" />
-            </svg>
-          </button>
+            <Trash2 aria-hidden="true" size={20} strokeWidth={1.75} />
+          </IconButton>
         </div>
 
-        <p className="flex flex-wrap items-baseline gap-x-2 text-sm">
-          <span className={onSale ? 'text-red-700' : 'text-gray-700'}>
+        <p className="flex flex-wrap items-baseline gap-x-2 text-sm tabular-nums">
+          <span className={onSale ? 'text-red-600' : 'text-slate-600'}>
             {formatPrice(price)} c/u
           </span>
           {onSale && (
-            <s className="text-xs text-gray-500">
+            <s className="text-xs text-slate-500">
               <span className="sr-only">Precio anterior: </span>
               {formatPrice(compareAtPrice)}
             </s>
@@ -76,7 +71,7 @@ export default function CartItemRow({ item, onRemove }: Props) {
             label={lineLabel}
             onChange={(next) => updateQuantity(productId, size, next)}
           />
-          <p className="text-sm font-semibold text-gray-900">
+          <p className="text-sm font-semibold text-slate-900 tabular-nums">
             <span className="sr-only">Subtotal: </span>
             <span>{formatPrice(price * quantity)}</span>
           </p>

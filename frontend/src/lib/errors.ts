@@ -1,11 +1,3 @@
-/** Recurso inexistente (HTTP 404). No se reintenta. */
-export class NotFoundError extends Error {
-  constructor(message = 'No encontrado') {
-    super(message)
-    this.name = 'NotFoundError'
-  }
-}
-
 /** Formato de error del proyecto (400 / 422 / 5xx). */
 export type ApiErrorBody = {
   error: { code: string; message: string; fields?: Record<string, string> }
@@ -23,5 +15,13 @@ export class ApiError extends Error {
     this.status = status
     this.code = body.error.code
     this.fields = body.error.fields
+  }
+}
+
+/** Recurso inexistente (HTTP 404). No se reintenta. */
+export class NotFoundError extends ApiError {
+  constructor(message = 'No encontrado', code = 'NOT_FOUND') {
+    super(404, { error: { code, message } })
+    this.name = 'NotFoundError'
   }
 }

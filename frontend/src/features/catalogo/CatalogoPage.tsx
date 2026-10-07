@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react'
 import { useMediaQuery } from '../../shared/hooks/useMediaQuery'
+import Button from '../../shared/ui/Button'
 import FiltersPanel from './filters/FiltersPanel'
 import { countActiveFilters, isPriceRangeValid } from './filtersParams'
 import { gridClass } from './grid/gridClass'
@@ -11,9 +12,6 @@ import { useProducts, useProductsCount } from './hooks/useProducts'
 import ActiveFilterChips from './toolbar/ActiveFilterChips'
 import CategoryChips from './toolbar/CategoryChips'
 import ResultsToolbar from './toolbar/ResultsToolbar'
-
-const buttonClass =
-  'min-h-11 rounded-md bg-gray-900 px-6 text-sm font-medium text-white hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none'
 
 export default function CatalogoPage() {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
@@ -44,10 +42,10 @@ export default function CatalogoPage() {
   }
 
   return (
-    <div className="py-6">
-      <h1 className="text-2xl font-bold lg:text-3xl">Comprar</h1>
+    <div className="py-8 md:py-12">
+      <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Comprar</h1>
 
-      <div className="mt-4 lg:flex lg:gap-8">
+      <div className="mt-6 lg:flex lg:gap-8">
         {isDesktop && <FiltersPanel mode="sidebar" filters={draft} onChange={change} />}
 
         <div className="min-w-0 flex-1 space-y-4">
@@ -74,19 +72,17 @@ export default function CatalogoPage() {
             </ul>
           ) : products.isError && !products.data ? (
             <div role="alert" className="flex flex-col items-center gap-4 py-16 text-center">
-              <p className="text-gray-700">
+              <p className="text-sm text-slate-600 md:text-base">
                 No pudimos cargar los productos. Revisa tu conexión e inténtalo de nuevo.
               </p>
-              <button type="button" onClick={() => products.refetch()} className={buttonClass}>
-                Reintentar
-              </button>
+              <Button onClick={() => products.refetch()}>Reintentar</Button>
             </div>
           ) : products.total === 0 ? (
             <div className="flex flex-col items-center gap-4 py-16 text-center">
-              <p className="text-gray-700">No encontramos productos con estos filtros</p>
-              <button type="button" onClick={clearFilters} className={buttonClass}>
-                Limpiar filtros
-              </button>
+              <p className="text-sm text-slate-600 md:text-base">
+                No encontramos productos con estos filtros
+              </p>
+              <Button onClick={clearFilters}>Limpiar filtros</Button>
             </div>
           ) : (
             <ProductGrid

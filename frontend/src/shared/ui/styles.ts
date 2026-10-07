@@ -16,6 +16,26 @@ export const buttonVariants: Record<ButtonVariant, string> = {
   ghost: 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
 }
 
+export type ButtonSize = 'sm' | 'md' | 'lg'
+
+// sm conserva 44px de alto en móvil (área táctil) y baja a 36px desde md.
+const buttonSizes: Record<ButtonSize, string> = {
+  sm: 'h-11 px-3 text-sm md:h-9',
+  md: 'h-11 px-5 text-sm md:text-base',
+  lg: 'h-12 px-6 text-base',
+}
+
+/** Clases de Button; también sirven para dar aspecto de botón a un Link. */
+export const buttonClass = (variant: ButtonVariant = 'primary', size: ButtonSize = 'md') =>
+  cn(
+    'inline-flex items-center justify-center gap-2 rounded-xl font-semibold break-words',
+    'active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100 motion-reduce:active:scale-100',
+    transition,
+    focusRing,
+    buttonVariants[variant],
+    buttonSizes[size],
+  )
+
 /** Estilos de campo compartidos por Input y Select (alto 44px, text-base evita el zoom de iOS). */
 export const fieldClass = (invalid = false) =>
   cn(

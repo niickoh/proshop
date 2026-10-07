@@ -23,29 +23,19 @@ export const SORT_LABELS: Record<SortOption, string> = {
   nuevos: 'Más nuevos',
 }
 
-export const SIZES = ['XS', 'S', 'M', 'L', 'XL', '38', '39', '40', '41', '42', '43', '44', 'U']
+// Tallas, colores y marcas vienen de `getProductFilters`; aquí solo la presentación.
 
 /** Nombre del color → clase de Tailwind para la muestra. */
-export const COLORS: { name: string; swatch: string }[] = [
-  { name: 'negro', swatch: 'bg-black' },
-  { name: 'blanco', swatch: 'bg-white' },
-  { name: 'gris', swatch: 'bg-gray-400' },
-  { name: 'azul', swatch: 'bg-blue-600' },
-  { name: 'rojo', swatch: 'bg-red-600' },
-  { name: 'verde', swatch: 'bg-green-600' },
-  { name: 'beige', swatch: 'bg-amber-100' },
-  { name: 'rosa', swatch: 'bg-pink-300' },
-]
+const COLOR_SWATCHES: Record<string, string> = {
+  negro: 'bg-black',
+  blanco: 'bg-white',
+  gris: 'bg-gray-400',
+  azul: 'bg-blue-600',
+  rojo: 'bg-red-600',
+  verde: 'bg-green-600',
+  beige: 'bg-amber-100',
+  rosa: 'bg-pink-300',
+}
 
-export const BRANDS = [
-  'Andes Wear',
-  'Copihue',
-  'Cordillera Co.',
-  'Costa Azul',
-  'Lana Sur',
-  'Maule Studio',
-  'Norte Basics',
-  'Pudú',
-  'Quillay',
-  'Valpo Denim',
-]
+/** Clase de la muestra; un color desconocido se ve neutro. */
+export const colorSwatch = (name: string) => COLOR_SWATCHES[name] ?? 'bg-slate-200'

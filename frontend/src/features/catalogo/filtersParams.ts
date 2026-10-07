@@ -16,6 +16,21 @@ export function filtersToParams(filters: ProductFilters): URLSearchParams {
   return params
 }
 
+/** Filtros → query params de `GET /api/products`: listas separadas por comas, sin params vacíos. */
+export function filtersToApiParams(filters: ProductFilters): URLSearchParams {
+  const params = new URLSearchParams()
+  for (const key of LIST_KEYS) {
+    const values = filters[key]?.filter(Boolean)
+    if (values?.length) params.set(key, [...values].sort().join(','))
+  }
+  if (filters.priceMin !== undefined) params.set('priceMin', String(filters.priceMin))
+  if (filters.priceMax !== undefined) params.set('priceMax', String(filters.priceMax))
+  if (filters.inStockOnly) params.set('inStockOnly', 'true')
+  if (filters.onSale) params.set('onSale', 'true')
+  if (filters.sort && filters.sort !== 'relevancia') params.set('sort', filters.sort)
+  return params
+}
+
 const toNumber = (value: string | null) => {
   if (value === null || value.trim() === '') return undefined
   const n = Number(value)

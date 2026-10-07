@@ -1,0 +1,1485 @@
+[
+  {
+    "id": "p001",
+    "name": "Polera básica negro",
+    "brand": "Andes Wear",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: negro con detalles en blanco. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "p002",
+    "name": "Jeans recto azul",
+    "brand": "Quillay",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "compareAtPrice": 37990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: azul con detalles en beige. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-06-02T01:00:00.000Z"
+  },
+  {
+    "id": "p003",
+    "name": "Chaqueta denim beige",
+    "brand": "Copihue",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: beige con detalles en azul. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-03-02T02:00:00.000Z"
+  },
+  {
+    "id": "p004",
+    "name": "Vestido midi blanco",
+    "brand": "Costa Azul",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": false,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: blanco con detalles en negro. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-07-28T00:00:00.000Z"
+  },
+  {
+    "id": "p005",
+    "name": "Zapatillas urbanas rojo",
+    "brand": "Maule Studio",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/calzado-1.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: rojo con detalles en verde. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-04-27T01:00:00.000Z"
+  },
+  {
+    "id": "p006",
+    "name": "Gorro de lana rosa",
+    "brand": "Cordillera Co.",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "compareAtPrice": 24990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: rosa con detalles en gris. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-01-25T02:00:00.000Z"
+  },
+  {
+    "id": "p007",
+    "name": "Polera oversize gris",
+    "brand": "Lana Sur",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: gris con detalles en rosa. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-06-22T00:00:00.000Z"
+  },
+  {
+    "id": "p008",
+    "name": "Pantalón cargo verde",
+    "brand": "Pudú",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: verde con detalles en rojo. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-03-22T01:00:00.000Z"
+  },
+  {
+    "id": "p009",
+    "name": "Parka acolchada negro",
+    "brand": "Valpo Denim",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: negro con detalles en blanco. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-08-17T02:00:00.000Z"
+  },
+  {
+    "id": "p010",
+    "name": "Vestido camisero azul",
+    "brand": "Norte Basics",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "compareAtPrice": 40990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: azul con detalles en beige. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "p011",
+    "name": "Botines beige",
+    "brand": "Andes Wear",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": false,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: beige con detalles en azul. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-02-14T01:00:00.000Z"
+  },
+  {
+    "id": "p012",
+    "name": "Bufanda blanco",
+    "brand": "Quillay",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: blanco con detalles en negro. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-07-12T02:00:00.000Z"
+  },
+  {
+    "id": "p013",
+    "name": "Polera manga larga rojo",
+    "brand": "Copihue",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: rojo con detalles en verde. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-04-11T00:00:00.000Z"
+  },
+  {
+    "id": "p014",
+    "name": "Jogger rosa",
+    "brand": "Costa Azul",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "compareAtPrice": 37990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: rosa con detalles en gris. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-01-09T01:00:00.000Z"
+  },
+  {
+    "id": "p015",
+    "name": "Cortavientos gris",
+    "brand": "Maule Studio",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: gris con detalles en rosa. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-06-06T02:00:00.000Z"
+  },
+  {
+    "id": "p016",
+    "name": "Vestido de lino verde",
+    "brand": "Cordillera Co.",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: verde con detalles en rojo. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-03-06T00:00:00.000Z"
+  },
+  {
+    "id": "p017",
+    "name": "Sandalias negro",
+    "brand": "Lana Sur",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: negro con detalles en blanco. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-08-01T01:00:00.000Z"
+  },
+  {
+    "id": "p018",
+    "name": "Cinturón de cuero azul",
+    "brand": "Pudú",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "compareAtPrice": 24990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": false,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: azul con detalles en beige. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-05-01T02:00:00.000Z"
+  },
+  {
+    "id": "p019",
+    "name": "Polera estampada beige",
+    "brand": "Valpo Denim",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: beige con detalles en azul. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-01-29T00:00:00.000Z"
+  },
+  {
+    "id": "p020",
+    "name": "Pantalón chino blanco",
+    "brand": "Norte Basics",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: blanco con detalles en negro. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-06-26T01:00:00.000Z"
+  },
+  {
+    "id": "p021",
+    "name": "Chaqueta de cuero sintético rojo",
+    "brand": "Andes Wear",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: rojo con detalles en verde. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-03-26T02:00:00.000Z"
+  },
+  {
+    "id": "p022",
+    "name": "Vestido tejido rosa",
+    "brand": "Quillay",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "compareAtPrice": 40990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: rosa con detalles en gris. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "p023",
+    "name": "Zapatillas running gris",
+    "brand": "Copihue",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: gris con detalles en rosa. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-05-21T01:00:00.000Z"
+  },
+  {
+    "id": "p024",
+    "name": "Mochila verde",
+    "brand": "Costa Azul",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: verde con detalles en rojo. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-02-18T02:00:00.000Z"
+  },
+  {
+    "id": "p025",
+    "name": "Polera piqué negro",
+    "brand": "Maule Studio",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/poleras-1.svg"
+    ],
+    "inStock": false,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: negro con detalles en blanco. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "p026",
+    "name": "Jeans mom azul",
+    "brand": "Cordillera Co.",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "compareAtPrice": 37990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: azul con detalles en beige. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-04-15T01:00:00.000Z"
+  },
+  {
+    "id": "p027",
+    "name": "Polar beige",
+    "brand": "Lana Sur",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: beige con detalles en azul. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-01-13T02:00:00.000Z"
+  },
+  {
+    "id": "p028",
+    "name": "Vestido corto blanco",
+    "brand": "Pudú",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: blanco con detalles en negro. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-06-10T00:00:00.000Z"
+  },
+  {
+    "id": "p029",
+    "name": "Mocasines rojo",
+    "brand": "Valpo Denim",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: rojo con detalles en verde. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-03-10T01:00:00.000Z"
+  },
+  {
+    "id": "p030",
+    "name": "Jockey rosa",
+    "brand": "Norte Basics",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "compareAtPrice": 24990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: rosa con detalles en gris. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-08-05T02:00:00.000Z"
+  },
+  {
+    "id": "p031",
+    "name": "Polera básica gris",
+    "brand": "Andes Wear",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: gris con detalles en rosa. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-05-05T00:00:00.000Z"
+  },
+  {
+    "id": "p032",
+    "name": "Jeans recto verde",
+    "brand": "Quillay",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": false,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: verde con detalles en rojo. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-02-02T01:00:00.000Z"
+  },
+  {
+    "id": "p033",
+    "name": "Chaqueta denim negro",
+    "brand": "Copihue",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: negro con detalles en blanco. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-06-30T02:00:00.000Z"
+  },
+  {
+    "id": "p034",
+    "name": "Vestido midi azul",
+    "brand": "Costa Azul",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "compareAtPrice": 40990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: azul con detalles en beige. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-03-30T00:00:00.000Z"
+  },
+  {
+    "id": "p035",
+    "name": "Zapatillas urbanas beige",
+    "brand": "Maule Studio",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/calzado-1.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: beige con detalles en azul. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-08-25T01:00:00.000Z"
+  },
+  {
+    "id": "p036",
+    "name": "Gorro de lana blanco",
+    "brand": "Cordillera Co.",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: blanco con detalles en negro. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-05-25T02:00:00.000Z"
+  },
+  {
+    "id": "p037",
+    "name": "Polera oversize rojo",
+    "brand": "Lana Sur",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: rojo con detalles en verde. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-02-22T00:00:00.000Z"
+  },
+  {
+    "id": "p038",
+    "name": "Pantalón cargo rosa",
+    "brand": "Pudú",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "compareAtPrice": 37990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: rosa con detalles en gris. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-07-20T01:00:00.000Z"
+  },
+  {
+    "id": "p039",
+    "name": "Parka acolchada gris",
+    "brand": "Valpo Denim",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": false,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: gris con detalles en rosa. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-04-19T02:00:00.000Z"
+  },
+  {
+    "id": "p040",
+    "name": "Vestido camisero verde",
+    "brand": "Norte Basics",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: verde con detalles en rojo. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-01-17T00:00:00.000Z"
+  },
+  {
+    "id": "p041",
+    "name": "Botines negro",
+    "brand": "Andes Wear",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: negro con detalles en blanco. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-06-14T01:00:00.000Z"
+  },
+  {
+    "id": "p042",
+    "name": "Bufanda azul",
+    "brand": "Quillay",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "compareAtPrice": 24990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: azul con detalles en beige. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-03-14T02:00:00.000Z"
+  },
+  {
+    "id": "p043",
+    "name": "Polera manga larga beige",
+    "brand": "Copihue",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: beige con detalles en azul. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-08-09T00:00:00.000Z"
+  },
+  {
+    "id": "p044",
+    "name": "Jogger blanco",
+    "brand": "Costa Azul",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: blanco con detalles en negro. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-05-09T01:00:00.000Z"
+  },
+  {
+    "id": "p045",
+    "name": "Cortavientos rojo",
+    "brand": "Maule Studio",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: rojo con detalles en verde. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-02-06T02:00:00.000Z"
+  },
+  {
+    "id": "p046",
+    "name": "Vestido de lino rosa",
+    "brand": "Cordillera Co.",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "compareAtPrice": 40990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": false,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: rosa con detalles en gris. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-07-04T00:00:00.000Z"
+  },
+  {
+    "id": "p047",
+    "name": "Sandalias gris",
+    "brand": "Lana Sur",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: gris con detalles en rosa. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-04-03T01:00:00.000Z"
+  },
+  {
+    "id": "p048",
+    "name": "Cinturón de cuero verde",
+    "brand": "Pudú",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: verde con detalles en rojo. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-08-29T02:00:00.000Z"
+  },
+  {
+    "id": "p049",
+    "name": "Polera estampada negro",
+    "brand": "Valpo Denim",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/poleras-1.svg",
+      "/products/poleras-2.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: negro con detalles en blanco. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-05-29T00:00:00.000Z"
+  },
+  {
+    "id": "p050",
+    "name": "Pantalón chino azul",
+    "brand": "Norte Basics",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "compareAtPrice": 37990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: azul con detalles en beige. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-02-26T01:00:00.000Z"
+  },
+  {
+    "id": "p051",
+    "name": "Chaqueta de cuero sintético beige",
+    "brand": "Andes Wear",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: beige con detalles en azul. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-07-24T02:00:00.000Z"
+  },
+  {
+    "id": "p052",
+    "name": "Vestido tejido blanco",
+    "brand": "Quillay",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: blanco con detalles en negro. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-04-23T00:00:00.000Z"
+  },
+  {
+    "id": "p053",
+    "name": "Zapatillas running rojo",
+    "brand": "Copihue",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "rojo",
+      "verde"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": false,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: rojo con detalles en verde. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-01-21T01:00:00.000Z"
+  },
+  {
+    "id": "p054",
+    "name": "Mochila rosa",
+    "brand": "Costa Azul",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "compareAtPrice": 24990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "rosa",
+      "gris"
+    ],
+    "images": [
+      "/products/accesorios-2.svg",
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": true,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: rosa con detalles en gris. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-06-18T02:00:00.000Z"
+  },
+  {
+    "id": "p055",
+    "name": "Polera piqué gris",
+    "brand": "Maule Studio",
+    "category": "poleras",
+    "gender": "mujer",
+    "price": 9990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "gris",
+      "rosa"
+    ],
+    "images": [
+      "/products/poleras-1.svg"
+    ],
+    "inStock": true,
+    "description": "Polera de algodón suave con corte cómodo para el día a día. Costuras reforzadas en hombros y cuello que mantiene su forma lavado tras lavado.\n\nColor: gris con detalles en rosa. Lavar a máquina en agua fría. No usar secadora.",
+    "createdAt": "2026-03-18T00:00:00.000Z"
+  },
+  {
+    "id": "p056",
+    "name": "Jeans mom verde",
+    "brand": "Cordillera Co.",
+    "category": "pantalones",
+    "gender": "hombre",
+    "price": 26990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "verde",
+      "rojo"
+    ],
+    "images": [
+      "/products/pantalones-2.svg",
+      "/products/pantalones-1.svg"
+    ],
+    "inStock": true,
+    "description": "Pantalón de tela resistente con tiro medio y bolsillos funcionales. Pensado para moverse con libertad sin perder una silueta ordenada.\n\nColor: verde con detalles en rojo. Lavar del revés en agua fría. Planchar a temperatura media.",
+    "createdAt": "2026-08-13T01:00:00.000Z"
+  },
+  {
+    "id": "p057",
+    "name": "Polar negro",
+    "brand": "Lana Sur",
+    "category": "chaquetas",
+    "gender": "unisex",
+    "price": 43990,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "negro",
+      "blanco"
+    ],
+    "images": [
+      "/products/chaquetas-1.svg",
+      "/products/chaquetas-2.svg"
+    ],
+    "inStock": true,
+    "description": "Chaqueta versátil para media estación, con cierre frontal y bolsillos laterales. Abriga sin abultar y combina con todo.\n\nColor: negro con detalles en blanco. Lavar a mano o en ciclo delicado. Secar a la sombra.",
+    "createdAt": "2026-05-13T02:00:00.000Z"
+  },
+  {
+    "id": "p058",
+    "name": "Vestido corto azul",
+    "brand": "Pudú",
+    "category": "vestidos",
+    "gender": "mujer",
+    "price": 28990,
+    "compareAtPrice": 40990,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "azul",
+      "beige"
+    ],
+    "images": [
+      "/products/vestidos-2.svg",
+      "/products/vestidos-1.svg"
+    ],
+    "inStock": true,
+    "description": "Vestido de caída fluida y tela liviana, fácil de llevar de día o de noche. Forro suave en el interior para mayor comodidad.\n\nColor: azul con detalles en beige. Lavar en ciclo delicado. Secar estirado a la sombra.",
+    "createdAt": "2026-02-10T00:00:00.000Z"
+  },
+  {
+    "id": "p059",
+    "name": "Mocasines beige",
+    "brand": "Valpo Denim",
+    "category": "calzado",
+    "gender": "hombre",
+    "price": 42990,
+    "sizes": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "colors": [
+      "beige",
+      "azul"
+    ],
+    "images": [
+      "/products/calzado-1.svg",
+      "/products/calzado-2.svg"
+    ],
+    "inStock": true,
+    "description": "Calzado con plantilla acolchada y suela de goma antideslizante. Liviano y firme para caminar todo el día.\n\nColor: beige con detalles en azul. Limpiar con paño húmedo. No sumergir en agua.",
+    "createdAt": "2026-07-08T01:00:00.000Z"
+  },
+  {
+    "id": "p060",
+    "name": "Jockey blanco",
+    "brand": "Norte Basics",
+    "category": "accesorios",
+    "gender": "unisex",
+    "price": 17990,
+    "sizes": [
+      "U"
+    ],
+    "colors": [
+      "blanco",
+      "negro"
+    ],
+    "images": [
+      "/products/accesorios-1.svg"
+    ],
+    "inStock": false,
+    "description": "Accesorio de materiales durables con terminaciones cuidadas. El complemento justo para cerrar cualquier look.\n\nColor: blanco con detalles en negro. Limpiar con paño seco. Guardar en un lugar sin humedad.",
+    "createdAt": "2026-04-07T02:00:00.000Z"
+  }
+]

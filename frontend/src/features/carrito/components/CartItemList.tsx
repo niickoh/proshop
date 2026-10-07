@@ -1,3 +1,5 @@
+import { cn } from '../../../shared/ui/cn'
+import { transition } from '../../../shared/ui/styles'
 import { useUndoRemove } from '../hooks/useUndoRemove'
 import { useCartStore } from '../store/cartStore'
 import CartItemRow from './CartItemRow'
@@ -11,13 +13,16 @@ export default function CartItemList() {
     <>
       <div role="status" aria-live="polite">
         {removed && (
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-md bg-gray-900 py-1 pr-1 pl-4 text-sm text-white">
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-slate-900 py-1 pr-1 pl-4 text-sm text-white shadow-md">
             <span>Producto eliminado</span>
             <button
               ref={undoButtonRef}
               type="button"
               onClick={undo}
-              className="min-h-11 rounded-md px-3 font-semibold underline hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+              className={cn(
+                'min-h-11 rounded-lg px-3 font-semibold hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none',
+                transition,
+              )}
             >
               Deshacer
             </button>
@@ -28,7 +33,7 @@ export default function CartItemList() {
       {items.length === 0 ? (
         <EmptyCart />
       ) : (
-        <ul aria-label="Productos en el carrito" className="divide-y divide-gray-200">
+        <ul aria-label="Productos en el carrito" className="divide-y divide-slate-100">
           {items.map((item, index) => (
             <CartItemRow
               key={`${item.productId}-${item.size}`}

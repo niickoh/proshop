@@ -1,11 +1,14 @@
-import { clsx } from 'clsx'
-import { COLORS } from '../data/filterOptions'
+import Chip from '../../../shared/ui/Chip'
+import { cn } from '../../../shared/ui/cn'
+import { colorSwatch } from '../data/filterOptions'
+import { useProductFilters } from '../hooks/useProductFilters'
 import type { FiltersChange, ProductFilters } from '../types'
 import FilterGroup from './FilterGroup'
 
 type Props = { filters: ProductFilters; onChange: FiltersChange }
 
 export default function ColorFilter({ filters, onChange }: Props) {
+  const colors = useProductFilters().data?.colors ?? []
   const selected = filters.color ?? []
   const toggle = (color: string) =>
     onChange({
@@ -14,30 +17,23 @@ export default function ColorFilter({ filters, onChange }: Props) {
 
   return (
     <FilterGroup title="Color" selectedCount={selected.length}>
-      <div className="flex flex-wrap gap-1">
-        {COLORS.map(({ name, swatch }) => {
-          const isSelected = selected.includes(name)
-          return (
-            <button
-              key={name}
-              type="button"
-              aria-pressed={isSelected}
-              aria-label={`Color ${name}`}
-              title={name}
-              onClick={() => toggle(name)}
-              className="flex min-h-11 min-w-11 items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
-            >
-              <span
-                aria-hidden="true"
-                className={clsx(
-                  'size-8 rounded-full border border-gray-300',
-                  swatch,
-                  isSelected && 'ring-2 ring-gray-900 ring-offset-2',
-                )}
-              />
-            </button>
-          )
-        })}
+      <div className="flex flex-wrap gap-2">
+        {colors.map((name) => (
+          <Chip
+            key={name}
+            selected={selected.includes(name)}
+            aria-label={`Color ${name}`}
+            title={name}
+            onClick={() => toggle(name)}
+            // Píldora redonda: el nombre va en aria-label/title; solo se ve la muestra.
+            className="size-11 px-0 md:size-11 md:min-h-11"
+          >
+            <span
+              aria-hidden="true"
+              className={cn('size-7 rounded-full ring-1 ring-slate-900/10', colorSwatch(name))}
+            />
+          </Chip>
+        ))}
       </div>
     </FilterGroup>
   )
