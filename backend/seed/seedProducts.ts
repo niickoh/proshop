@@ -5,7 +5,10 @@ import { z } from 'zod';
 import { loadEnv } from '../src/config/env.js';
 import { Product } from '../src/domain/product/entities/Product.js';
 import { ProductResponse } from '../src/infrastructure/http/products/productSchemas.js';
-import { connectMongo, disconnectMongo } from '../src/infrastructure/persistence/mongo/connection.js';
+import {
+  connectMongo,
+  disconnectMongo,
+} from '../src/infrastructure/persistence/mongo/connection.js';
 import { ProductModel } from '../src/infrastructure/persistence/mongo/ProductModel.js';
 
 const SeedFile = z.array(ProductResponse.extend({ createdAt: z.iso.datetime() }));
@@ -14,12 +17,15 @@ const SeedFile = z.array(ProductResponse.extend({ createdAt: z.iso.datetime() })
 export function parseSeedProducts(input: unknown): Product[] {
   const result = SeedFile.safeParse(input);
   if (!result.success) {
-    const problems = result.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`);
+    const problems = result.error.issues.map(
+      (issue) => `${issue.path.join('.')}: ${issue.message}`,
+    );
     throw new Error(`products.json inválido:\n${problems.join('\n')}`);
   }
   return result.data.map((item, index) => {
     try {
-      return Product.create({ ...item, createdAt: new Date(item.createdAt) });
+      const createdAt = new Date(item.createdAt);
+      return Product.create({ ...item, active: true, version: 0, createdAt, updatedAt: createdAt });
     } catch (error) {
       throw new Error(
         `products.json inválido en [${index}] (${item.id}): ${(error as Error).message}`,

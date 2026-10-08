@@ -55,3 +55,26 @@ export async function apiGet<T>(path: string, { params, signal }: GetOptions = {
     throw toApiError(error)
   }
 }
+
+type SendOptions = { signal?: AbortSignal }
+
+/** POST / PUT / PATCH con cuerpo JSON a `VITE_API_URL + path`. Errores igual que `apiGet`. */
+export async function apiSend<T>(
+  method: 'post' | 'put' | 'patch',
+  path: string,
+  body: unknown,
+  { signal }: SendOptions = {},
+): Promise<T> {
+  try {
+    const response = await apiClient.request<T>({
+      method,
+      url: path,
+      data: body,
+      baseURL: import.meta.env.VITE_API_URL,
+      signal,
+    })
+    return response.data
+  } catch (error) {
+    throw toApiError(error)
+  }
+}

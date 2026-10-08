@@ -7,6 +7,7 @@ import { focusRing } from '../../ui/styles'
 import { useMobileMenu } from './useMobileMenu'
 import NavComprar from './options/NavComprar'
 import NavEncargar from './options/NavEncargar'
+import NavAdministracion from './options/NavAdministracion'
 
 export default function Header() {
   const { isOpen, toggle, close, containerRef } = useMobileMenu<HTMLElement>()
@@ -54,6 +55,7 @@ export default function Header() {
         >
           <NavComprar onNavigate={close} />
           <NavEncargar onNavigate={close} />
+          <NavAdministracion onNavigate={close} />
         </nav>
 
         {/* Móvil: se ordena junto al botón de menú; desde md, a la derecha del menú. */}

@@ -11,12 +11,23 @@ import {
   type ProductResponse,
 } from './productSchemas.js';
 
+/** Forma pública: sin `active`, `version` ni `updatedAt` (solo para admin). */
 export function toProductResponse(product: Product): z.infer<typeof ProductResponse> {
-  const { createdAt, compareAtPrice, ...rest } = product.props;
+  const p = product.props;
   return {
-    ...rest,
-    ...(compareAtPrice !== undefined && { compareAtPrice }),
-    createdAt: createdAt.toISOString(),
+    id: p.id,
+    name: p.name,
+    brand: p.brand,
+    category: p.category,
+    gender: p.gender,
+    price: p.price,
+    ...(p.compareAtPrice !== undefined && { compareAtPrice: p.compareAtPrice }),
+    sizes: p.sizes,
+    colors: p.colors,
+    images: p.images,
+    inStock: p.inStock,
+    description: p.description,
+    createdAt: p.createdAt.toISOString(),
   };
 }
 

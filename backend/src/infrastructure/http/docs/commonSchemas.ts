@@ -17,7 +17,7 @@ export const ErrorResponse = registry.register(
     .openapi({ description: 'Formato común de error de la API' }),
 );
 
-export const errorResponse = (description: string) => ({
+export const errorResponse = (description: string, example?: z.infer<typeof ErrorResponse>) => ({
   description,
-  content: { 'application/json': { schema: ErrorResponse } },
+  content: { 'application/json': { schema: ErrorResponse, ...(example && { example }) } },
 });

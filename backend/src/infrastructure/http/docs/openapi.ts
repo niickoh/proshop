@@ -5,6 +5,7 @@ import { registry } from './registry.js';
 import './commonSchemas.js';
 import '../healthRoute.js';
 import '../products/productSchemas.js';
+import '../admin/products/adminProductSchemas.js';
 
 // package.json está a la misma profundidad desde src/ y desde dist/
 const { version } = JSON.parse(

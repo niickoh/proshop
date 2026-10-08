@@ -15,7 +15,11 @@ const productSchema = new Schema(
     images: { type: [String], default: [] },
     inStock: { type: Boolean, required: true },
     description: { type: String, required: true },
+    // Los productos sembrados antes del panel de admin pueden no tener estos campos
+    active: { type: Boolean, default: true },
+    version: { type: Number, default: 0 },
     createdAt: { type: Date, required: true },
+    updatedAt: { type: Date },
   },
   { collection: 'products', versionKey: false },
 );
@@ -25,6 +29,8 @@ productSchema.index({ brand: 1 });
 productSchema.index({ sizes: 1 });
 productSchema.index({ colors: 1 });
 productSchema.index({ inStock: -1, createdAt: -1 });
+productSchema.index({ active: 1, createdAt: -1 });
+productSchema.index({ active: 1, price: 1 });
 
 export type ProductDocument = InferSchemaType<typeof productSchema> & { _id: string };
 

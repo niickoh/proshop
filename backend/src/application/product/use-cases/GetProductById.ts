@@ -7,7 +7,8 @@ export class GetProductById {
 
   async execute(id: string): Promise<Product> {
     const product = await this.products.findById(id);
-    if (!product) throw new ProductNotFoundError(id);
+    // Un producto archivado no existe para la tienda
+    if (!product?.isActive) throw new ProductNotFoundError(id);
     return product;
   }
 }

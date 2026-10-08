@@ -33,7 +33,10 @@ describe('Product (dominio)', () => {
     images: ['/products/x.svg'],
     inStock: true,
     description: 'desc',
+    active: true,
+    version: 0,
     createdAt: new Date(),
+    updatedAt: new Date(),
   };
 
   it('acepta un producto válido', () => {

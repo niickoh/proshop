@@ -5,6 +5,7 @@ import Header from './Header'
 import NavComprar from './options/NavComprar'
 import NavEncargar from './options/NavEncargar'
 import NavContacto from './options/NavContacto'
+import NavAdministracion from './options/NavAdministracion'
 
 function LocationDisplay() {
   const location = useLocation()
@@ -27,12 +28,12 @@ const getNav = () => screen.getByRole('navigation', { name: 'Principal' })
 const getMenuButton = () => screen.getByRole('button', { name: 'Abrir menú' })
 
 describe('Header', () => {
-  it('muestra el logo y las opciones Comprar y Encargar en ese orden, sin Contáctanos', () => {
+  it('muestra el logo y las opciones Comprar, Encargar y Administración en ese orden, sin Contáctanos', () => {
     renderHeader()
     expect(screen.getByRole('banner')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'ProShop' })).toBeInTheDocument()
     const links = within(getNav()).getAllByRole('link', { hidden: true })
-    expect(links.map((l) => l.textContent)).toEqual(['Comprar', 'Encargar'])
+    expect(links.map((l) => l.textContent)).toEqual(['Comprar', 'Encargar', 'Administración'])
     expect(
       screen.queryByRole('link', { name: 'Contáctanos', hidden: true }),
     ).not.toBeInTheDocument()
@@ -45,6 +46,7 @@ describe('Header', () => {
     for (const [name, path] of [
       ['Comprar', '/comprar'],
       ['Encargar', '/encargar'],
+      ['Administración', '/admin'],
     ]) {
       await user.click(getMenuButton())
       await user.click(screen.getByRole('link', { name }))
@@ -72,6 +74,7 @@ describe('Header', () => {
       [NavComprar, 'Comprar', '/comprar'],
       [NavEncargar, 'Encargar', '/encargar'],
       [NavContacto, 'Contáctanos', '/contacto'],
+      [NavAdministracion, 'Administración', '/admin'],
     ] as const
     for (const [Option, name, path] of cases) {
       const { unmount } = render(
@@ -98,7 +101,7 @@ describe('Header', () => {
     await user.click(getMenuButton())
     expect(getMenuButton()).toHaveAttribute('aria-expanded', 'true')
     expect(getNav()).not.toHaveClass('hidden')
-    for (const name of ['Comprar', 'Encargar']) {
+    for (const name of ['Comprar', 'Encargar', 'Administración']) {
       expect(within(getNav()).getByRole('link', { name })).toBeVisible()
     }
   })
@@ -126,7 +129,7 @@ describe('Header', () => {
     await user.click(getMenuButton())
     ;(document.activeElement as HTMLElement | null)?.blur()
 
-    const expected = ['ProShop', 'Abrir menú', 'Comprar', 'Encargar']
+    const expected = ['ProShop', 'Abrir menú', 'Comprar', 'Encargar', 'Administración']
     for (const name of expected) {
       await user.tab()
       expect(document.activeElement).toHaveAccessibleName(name)

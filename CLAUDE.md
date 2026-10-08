@@ -13,6 +13,7 @@
   _plantilla.md       Plantilla para specs nuevos
   /frontend           Specs de vistas y componentes
   /backend            Specs de la API
+  /fullstack          Specs que cambian frontend y backend a la vez
 docker-compose.yml    frontend + backend + mongo
 .env.example          Variables requeridas (nunca subir .env)
 ```
@@ -33,6 +34,7 @@ docker-compose.yml    frontend + backend + mongo
 2. Si el spec toca más de 5 archivos o algo es ambiguo, proponer un plan breve y esperar confirmación.
    Si no, implementar directo.
 3. Escribir primero los tests de los criterios de aceptación; luego implementar hasta que pasen.
+   Excepción: si la sección "Tests" del spec dice "Sin tests automatizados", no escribir ni correr tests.
 4. Correr lint, chequeo de tipos y solo los tests relacionados (ej. `npm test -- Header`).
 5. Respetar "Fuera de alcance": no crear ni modificar nada fuera del spec.
 6. Al terminar, responder en máximo 3 líneas: archivos creados/modificados y resultado de lint y tests.

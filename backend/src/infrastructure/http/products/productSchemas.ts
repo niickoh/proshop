@@ -22,11 +22,7 @@ const csvList = (example: string) =>
     )
     .openapi({ description: 'Lista separada por comas', example });
 
-const integer = (message: string) =>
-  z
-    .string()
-    .regex(/^\d+$/, message)
-    .transform(Number);
+const integer = (message: string) => z.string().regex(/^\d+$/, message).transform(Number);
 
 const booleanFlag = z
   .enum(['true', 'false'], { error: 'Debe ser true o false' })
@@ -75,8 +71,15 @@ export const ProductIdParams = z.object({
   id: z.string().min(1).openapi({ example: 'p001' }),
 });
 
-/** Valida o lanza 400 con `fields` indicando qué parámetro falló. */
-export function parseOrThrow<T extends z.ZodType>(schema: T, input: unknown): z.output<T> {
+/**
+ * Valida o lanza VALIDATION_ERROR con `fields` indicando qué campo falló.
+ * 400 para parámetros de URL; los cuerpos (formularios) usan 422.
+ */
+export function parseOrThrow<T extends z.ZodType>(
+  schema: T,
+  input: unknown,
+  status: 400 | 422 = 400,
+): z.output<T> {
   const result = schema.safeParse(input);
   if (result.success) return result.data;
   const fields: ErrorFields = {};
@@ -84,7 +87,9 @@ export function parseOrThrow<T extends z.ZodType>(schema: T, input: unknown): z.
     const key = issue.path.join('.') || '_';
     fields[key] ??= issue.message;
   }
-  throw new AppError('VALIDATION_ERROR', 400, 'Los parámetros enviados no son válidos', fields);
+  const message =
+    status === 400 ? 'Los parámetros enviados no son válidos' : 'Los datos enviados no son válidos';
+  throw new AppError('VALIDATION_ERROR', status, message, fields);
 }
 
 // --- Respuestas ---
@@ -122,7 +127,9 @@ export const ProductResponse = registry.register(
         .openapi({ description: 'Precio anterior si está en oferta' }),
       sizes: z.array(z.string()),
       colors: z.array(z.string()),
-      images: z.array(z.string()).openapi({ description: 'Rutas relativas; la primera es la portada' }),
+      images: z
+        .array(z.string())
+        .openapi({ description: 'Rutas relativas; la primera es la portada' }),
       inStock: z.boolean(),
       description: z.string(),
       createdAt: z.string().openapi({ description: 'ISO 8601' }),

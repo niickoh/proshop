@@ -5,14 +5,15 @@ type FakeResponse = { status?: number; data: unknown }
 
 /**
  * Reemplaza el adapter de `apiClient` (sin red). `handler` recibe la config de cada petición
- * y devuelve `{ status, data }`; un status >= 400 se rechaza como lo haría axios.
+ * y devuelve `{ status, data }` (o una promesa, para simular demora); un status >= 400 se rechaza como lo haría axios.
  */
 export function mockApiClient() {
-  const handler = vi.fn<(config: InternalAxiosRequestConfig) => FakeResponse>()
+  const handler =
+    vi.fn<(config: InternalAxiosRequestConfig) => FakeResponse | Promise<FakeResponse>>()
   const original = apiClient.defaults.adapter
 
   apiClient.defaults.adapter = async (config) => {
-    const { status = 200, data } = handler(config)
+    const { status = 200, data } = await handler(config)
     const response: AxiosResponse = { data, status, statusText: '', headers: {}, config }
     if (status >= 400) {
       throw new AxiosError(`Error ${status}`, AxiosError.ERR_BAD_RESPONSE, config, null, response)
